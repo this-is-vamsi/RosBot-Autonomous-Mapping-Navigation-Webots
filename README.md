@@ -1,4 +1,4 @@
-# 🤖 RosBot Autonomous Mapper & Navigator
+# 🤖 RosBot Autonomous Mapping & Navigation in Webots
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
 ![Webots](https://img.shields.io/badge/Simulator-Webots-red)
@@ -83,6 +83,7 @@ This project was developed for the Autonomous Robotics module (Winter 2025-26) b
 
 **Institution:** OTH Amberg-Weiden  
 **Module:** Autonomous Robotics (Winter 2025–26)
+
 
 
 
