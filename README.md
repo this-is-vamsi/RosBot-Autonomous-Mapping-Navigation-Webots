@@ -7,6 +7,27 @@
 
 An autonomous control system developed for the RosBot mobile robot. This project features a unified, highly adaptable controller capable of exploring unknown maze environments, mapping structural geometry, identifying semantic landmarks, avoiding hazards, and executing high-speed optimal pathing—all without relying on hardcoded layouts.
 
+## 🎯 Project Goal & Objectives
+
+The primary goal of this project is to implement an autonomous navigation system for the RosBot to solve unknown maze environments in the shortest simulation time possible.
+
+### Technical Objectives
+
+**Sequence-Based Navigation:**  
+Start the simulation, navigate to reach the Blue Pillar first, and subsequently reach the Yellow Pillar to stop the timer.
+
+**Environmental Constraints:**  
+Strictly avoid driving over Green Ground (poison zones).
+
+**Navigation Complexity:**  
+Successfully traverse narrow passages and identify "too narrow" passages that prevent transit.
+
+**Semantic Hazard Avoidance:**  
+Detect Red Walls indicating dead ends or paths that lead nowhere.
+
+**Localization:**  
+Use the Webots Supervisor to retrieve the global world pose for precise localization.
+
 ## 🎥Project Demonstration
 
 | Maze 1 (incomplete) | Maze 2 | Maze 3 | Maze 4 | Maze 5 |
@@ -65,9 +86,8 @@ This project was developed for the Autonomous Robotics module (Winter 2025-26) b
 * **Nagendra Mandapati**
 * **Dharsan Morkar** 
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+**Institution:** OTH Amberg-Weiden  
+**Module:** Autonomous Robotics (Winter 2025–26)
 
 
 
