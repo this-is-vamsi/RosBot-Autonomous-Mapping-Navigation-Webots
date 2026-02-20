@@ -45,3 +45,30 @@ You need [Webots](https://cyberbotics.com/) installed on your machine and a Pyth
 Install the required Python packages:
 ```bash
 pip install numpy opencv-python pygame
+
+## 🧠 Engineering Solutions to Complex Problems
+
+During development, we solved several critical edge cases:
+
+* **The "Red Wall" Infinite Loop:** Standard planners get stuck turning back and forth at red walls. We engineered a **Dead-End Memory** that blacklists a 3.0m radius around red walls, forcing the robot to seek entirely new routes.
+* **The "Ghost Poison" (Projective Geometry):** Flat floor hazards are invisible to LiDAR. We used homography to map the camera's 2D pixel contours to world coordinates, fitting bounding boxes (`cv2.minAreaRect`) to the floor and locking them into the A* cost-map.
+* **Lost Mode Fallback:** If the robot fully maps an environment without finding the goal, it autonomously navigates to a random open space and performs a 360° sensor sweep to catch obscured targets.
+
+## 👨‍💻 Contributors
+
+This project was developed for the Autonomous Robotics module (Winter 2025-26) by **Team AR**:
+
+* **[Your Name]** - [Your LinkedIn Profile] / [Your GitHub]
+* **[Contributor 2 Name]** - [Link]
+* **[Contributor 3 Name]** - [Link]
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+### 💡 Tips for making your GitHub repo stand out (Remove this before publishing!):
+1. **Add a GIF at the very top:** Recruiters spend about 10 seconds looking at a repo. A GIF showing your Pygame map updating live next to the robot moving in Webots is incredibly impressive. You can use free tools like *ScreenToGif* to record a small snippet.
+2. **Organize your files:** Don't just dump all code in the main folder. Create a `controllers/` folder for your python scripts, a `worlds/` folder for the Webots files, and a `media/` folder for your images/GIFs.
+3. **Include the Pygame Screenshot:** Take a screenshot of the Pygame window (showing the map, the red frontiers, and the blue path) and include it in the README under the Architecture section to show off the SLAM output visually.
