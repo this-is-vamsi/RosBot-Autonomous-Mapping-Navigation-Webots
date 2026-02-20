@@ -7,13 +7,11 @@
 
 An autonomous control system developed for the RosBot mobile robot. This project features a unified, highly adaptable controller capable of exploring unknown maze environments, mapping structural geometry, identifying semantic landmarks, avoiding hazards, and executing high-speed optimal pathing—all without relying on hardcoded layouts.
 
-## 🎥 Demonstrations
-
-*(Add GIFs or YouTube links of your robot solving the mazes here. GIFs are highly recommended for GitHub!)*
+## 🎥Project Demonstration
 
 | Maze 1 (incomplete) | Maze 2 | Maze 3 | Maze 4 | Maze 5 |
 | :---: | :---: | :---: | :---: | :---: |
-| [![Maze 1](https://drive.google.com/file/d/1QZHZpnhG1CD_ujp4BcvCTXvQayxwz7-O/view?usp=sharing) | [![Maze 2](https://drive.google.com/file/d/100V5A_OpzAN0D6-X1i9v3UarD0YugCVk/view?usp=sharing) | [![Maze 3](https://drive.google.com/file/d/1Atj4pOJkYmPBaaMFD5G_hTV-cq4udAjN/view?usp=sharing) | [![Maze 4](https://drive.google.com/file/d/1Z9a1RK9zhQ5Hqt7SH47c8B69scG74zuc/view?usp=sharing) | [![Maze 5](https://drive.google.com/file/d/1J421rTs8WrWG7BcnbvRVcDs3GCdNIcAc/view?usp=sharing) |
+| [[Maze 1](https://drive.google.com/file/d/1QZHZpnhG1CD_ujp4BcvCTXvQayxwz7-O/view?usp=sharing) | [[Maze 2](https://drive.google.com/file/d/100V5A_OpzAN0D6-X1i9v3UarD0YugCVk/view?usp=sharing) | [[Maze 3](https://drive.google.com/file/d/1Atj4pOJkYmPBaaMFD5G_hTV-cq4udAjN/view?usp=sharing) | [[Maze 4](https://drive.google.com/file/d/1Z9a1RK9zhQ5Hqt7SH47c8B69scG74zuc/view?usp=sharing) | [[Maze 5](https://drive.google.com/file/d/1J421rTs8WrWG7BcnbvRVcDs3GCdNIcAc/view?usp=sharing) |
 
 
 ## ✨ Key Features
@@ -37,15 +35,6 @@ The controller runs on a 32ms timestep, seamlessly integrating mapping, vision, 
    - *Safety:* Inflates the occupancy grid to account for the robot's physical radius, generating a safe configuration space.
 3. **Action:** Calculates A* paths to the best frontier or target, utilizing a PID-like heading correction to drive smoothly.
 
-## 🚀 How to Run
-
-### Prerequisites
-You need [Webots](https://cyberbotics.com/) installed on your machine and a Python environment.
-
-Install the required Python packages:
-```bash
-pip install numpy opencv-python pygame
-```
 ## 🧠 Engineering Solutions to Complex Problems
 
 During development, we solved several critical edge cases:
@@ -53,6 +42,19 @@ During development, we solved several critical edge cases:
 * **The "Red Wall" Infinite Loop:** Standard planners get stuck turning back and forth at red walls. We engineered a **Dead-End Memory** that blacklists a 3.0m radius around red walls, forcing the robot to seek entirely new routes.
 * **The "Ghost Poison" (Projective Geometry):** Flat floor hazards are invisible to LiDAR. We used homography to map the camera's 2D pixel contours to world coordinates, fitting bounding boxes (`cv2.minAreaRect`) to the floor and locking them into the A* cost-map.
 * **Lost Mode Fallback:** If the robot fully maps an environment without finding the goal, it autonomously navigates to a random open space and performs a 360° sensor sweep to catch obscured targets.
+
+---
+
+# 📁 Project Structure
+
+```bash
+├── final_code.py         # Main Controller (Unified Logic)
+├── Project_Report.pdf    # Detailed Description of the Project
+├── requirements.txt      # Python dependencies
+└── README.md             # Project documentation
+```
+
+---
 
 ## 👨‍💻 Contributors
 
@@ -66,6 +68,7 @@ This project was developed for the Autonomous Robotics module (Winter 2025-26) b
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 
 
