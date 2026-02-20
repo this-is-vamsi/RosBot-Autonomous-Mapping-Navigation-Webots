@@ -13,26 +13,21 @@ The primary goal of this project is to implement an autonomous navigation system
 
 ### Technical Objectives
 
-**Sequence-Based Navigation:**  
-Start the simulation, navigate to reach the Blue Pillar first, and subsequently reach the Yellow Pillar to stop the timer.
+- **Sequence-Based Navigation:** Start the simulation, navigate to reach the Blue Pillar first, and subsequently reach the Yellow Pillar to stop the timer.
 
-**Environmental Constraints:**  
-Strictly avoid driving over Green Ground (poison zones).
+- **Environmental Constraints:** Strictly avoid driving over Green Ground (poison zones).
 
-**Navigation Complexity:**  
-Successfully traverse narrow passages and identify "too narrow" passages that prevent transit.
+- **Navigation Complexity:** Successfully traverse narrow passages and identify "too narrow" passages that prevent transit.
 
-**Semantic Hazard Avoidance:**  
-Detect Red Walls indicating dead ends or paths that lead nowhere.
+- **Semantic Hazard Avoidance:** Detect Red Walls indicating dead ends or paths that lead nowhere.
 
-**Localization:**  
-Use the Webots Supervisor to retrieve the global world pose for precise localization.
+- **Localization:** Use the Webots Supervisor to retrieve the global world pose for precise localization.
 
 ## 🎥Project Demonstration
 
 | Maze 1 (incomplete) | Maze 2 | Maze 3 | Maze 4 | Maze 5 |
 | :---: | :---: | :---: | :---: | :---: |
-| [[Maze 1](https://drive.google.com/file/d/1QZHZpnhG1CD_ujp4BcvCTXvQayxwz7-O/view?usp=sharing) | [[Maze 2](https://drive.google.com/file/d/100V5A_OpzAN0D6-X1i9v3UarD0YugCVk/view?usp=sharing) | [[Maze 3](https://drive.google.com/file/d/1Atj4pOJkYmPBaaMFD5G_hTV-cq4udAjN/view?usp=sharing) | [[Maze 4](https://drive.google.com/file/d/1Z9a1RK9zhQ5Hqt7SH47c8B69scG74zuc/view?usp=sharing) | [[Maze 5](https://drive.google.com/file/d/1J421rTs8WrWG7BcnbvRVcDs3GCdNIcAc/view?usp=sharing) |
+| [Maze 1](https://drive.google.com/file/d/1QZHZpnhG1CD_ujp4BcvCTXvQayxwz7-O/view?usp=sharing) | [Maze 2](https://drive.google.com/file/d/100V5A_OpzAN0D6-X1i9v3UarD0YugCVk/view?usp=sharing) | [Maze 3](https://drive.google.com/file/d/1Atj4pOJkYmPBaaMFD5G_hTV-cq4udAjN/view?usp=sharing) | [Maze 4](https://drive.google.com/file/d/1Z9a1RK9zhQ5Hqt7SH47c8B69scG74zuc/view?usp=sharing) | [Maze 5](https://drive.google.com/file/d/1J421rTs8WrWG7BcnbvRVcDs3GCdNIcAc/view?usp=sharing) |
 
 
 ## ✨ Key Features
@@ -69,8 +64,8 @@ During development, we solved several critical edge cases:
 # 📁 Project Structure
 
 ```bash
-├── final_code.py         # Main Controller (Unified Logic)
-├── Project_Report.pdf    # Detailed Description of the Project
+├── controller.py         # Main Controller (Unified Logic)
+├── Project_Report.pdf    # Detailed Methodology of the Project
 ├── requirements.txt      # Python dependencies
 └── README.md             # Project documentation
 ```
@@ -81,13 +76,14 @@ During development, we solved several critical edge cases:
 
 This project was developed for the Autonomous Robotics module (Winter 2025-26) by **Team AR**:
 
-* **Vamsi Ganesh**
+* **Satya Naga Vamsi Ganesh**
 * **Suresh Dangeti** 
 * **Nagendra Mandapati**
 * **Dharsan Morkar** 
 
 **Institution:** OTH Amberg-Weiden  
 **Module:** Autonomous Robotics (Winter 2025–26)
+
 
 
 
